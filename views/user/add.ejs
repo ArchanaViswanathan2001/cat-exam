@@ -1,0 +1,143 @@
+<!--
+including header content which is common for all pages
+-->
+
+<%- include ../layouts/header.ejs %>	
+
+<% if (messages.error) { %>
+	<p style="color:red"><%- messages.error %></p>
+<% } %>
+
+<% if (messages.success) { %>
+	<p style="color:green"><%- messages.success %></p>
+<% } %>
+	<style>
+						@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+						body {
+							background: #fff;
+							font-family: 'PT Sans', sans-serif;
+						}
+
+						h2 {
+							padding-top: 1.5rem;
+						}
+
+						a {
+							color: #333;
+						}
+
+						a:hover {
+							color: #da5767;
+							text-decoration: none;
+						}
+
+						.card {
+							border: 0.40rem solid #f8f9fa;
+							top: 10%;
+						}
+
+						.form-control {
+							background-color: #f8f9fa;
+							padding: 20px;
+							padding: 25px 15px;
+							margin-bottom: 1.3rem;
+						}
+
+						.form-control:focus {
+
+							color: #000000;
+							background-color: #ffffff;
+							border: 3px solid #da5767;
+							outline: 0;
+							box-shadow: none;
+
+						}
+
+						.btn {
+							padding: 0.6rem 1.2rem;
+							background: #da5767;
+							border: 2px solid #da5767;
+						}
+
+						.btn-primary:hover {
+
+
+							background-color: #df8c96;
+							border-color: #df8c96;
+							transition: .3s;
+
+						}
+					</style>
+	<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-md-5">
+								<div class="card">
+									<h2 class="card-title text-center">Register</h2>
+									<div class="card-body py-md-4">
+										<form action="/users/add" method="post" name="form1">
+											<table>
+
+												<tr>
+													<td>Id</td>
+													<td><input type="text" class="form-control" name="id" id="id"
+															value="<%= id %>" /></td>
+												</tr>
+												<tr>
+													<td>Name</td>
+													<td><input type="text" class="form-control" name="name" id="name"
+															value="<%= name %>" /></td>
+												</tr>
+
+
+												<tr>
+													<td>Designation</td>
+													<td><input type="text" class="form-control" name="designation"
+															value="<%= designation%>" /></td>
+												</tr>
+
+
+
+
+												<tr>
+													<td>Department</td>
+													<td><input type="text" class="form-control" name="department"
+															value="<%= department %>" /></td>
+												</tr>
+												<tr>
+													<td>Salary</details></td>
+													<td><input type="text" class="form-control" name="salary"
+															value="<%= salary %>" /></td>
+												</tr>
+												
+												
+												<tr>
+													<td>Location</details></td>
+													<td><input type="text" class="form-control" name="location"
+															value="<%= location %>" /></td>
+												</tr>
+
+
+												<tr>
+													<td></td>
+													<td><button class="btn btn-primary" name="submit"
+															value="Add">Add</button></td>
+												</tr>
+
+
+											</table>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<!--
+including footer content which is common for all pages
+-->
+					<%- include ../layouts/footer.ejs %>
+
+ 
